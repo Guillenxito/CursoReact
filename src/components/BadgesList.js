@@ -4,6 +4,8 @@ import "./styles/BadgesList.css";
 
 class BadgesList extends React.Component {
   render() {
+    console.log("RESPONSE");
+    console.log(this.props.badges);
     return (
       <div className="BadgesList">
         <ul className="list-unstyled">
@@ -26,17 +28,19 @@ class BadgesListItem extends React.Component {
       <div className="BadgesListItem">
         <img
           className="BadgesListItem__avatar"
-          src={this.props.badge.avatarUrl}
-          alt={`${this.props.badge.firstName} ${this.props.badge.lastName}`}
+          src={this.props.badge.image}
+          alt={`${this.props.badge.name}`}
         />
 
         <div>
-          <strong>
-            {this.props.badge.firstName} {this.props.badge.lastName}
-          </strong>
-          <br />@{this.props.badge.twitter}
+          <strong>{this.props.badge.name}</strong>
+          {`  (${this.props.badge.gender})`}
           <br />
-          {this.props.badge.jobTitle}
+          <strong>Species: </strong>
+          {this.props.badge.species}
+          <br />
+          <strong>Status: </strong>
+          {this.props.badge.status}
         </div>
       </div>
     );
