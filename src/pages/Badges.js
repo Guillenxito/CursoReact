@@ -15,6 +15,9 @@ class Badges extends React.Component {
     console.log("1.constructor");
     super(props);
     this.state = {
+      nextPage: 1,
+      loading: true,
+      error: null,
       data: {
         results: []
       }
@@ -22,12 +25,28 @@ class Badges extends React.Component {
   }
 
   fecthCharacters = async () => {
-    const response = await fetch("https://rickandmortyapi.com/api/character");
-    const data = await response.json();
+    this.setState({ loading: true, error: null });
 
-    this.setState({
-      data: data
-    });
+    try {
+      const response = await fetch(
+        `https://rickandmortyapi.com/api/character?page=${this.state.nextPage}`
+      );
+      const data = await response.json();
+
+      this.setState({
+        nextPage: this.state.nextPage + 1,
+        loading: false,
+        data: {
+          info: this.info,
+          results: [].concat(this.state.data.results, data.results)
+        }
+      });
+    } catch (error) {
+      this.setState({
+        loading: false,
+        error: error
+      });
+    }
   };
 
   componentDidMount() {
@@ -67,6 +86,11 @@ class Badges extends React.Component {
           <div className="Badges__list">
             <div className="Badges__container">
               <BadgesList badges={this.state.data.results} />
+              {!this.state.loading && (
+                <button onClick={() => this.fecthCharacters()}>
+                  Load More
+                </button>
+              )}
             </div>
           </div>
         </div>
