@@ -6,7 +6,7 @@
       "lastName": "Grady",
       "email": "Leann_Berge@gmail.com",
       "jobTitle": "Legacy Brand Director",
-      "twitter": "FredaGrady22221-7573",
+      "twitter": "FredaGrady22221",
       "avatarUrl": "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon"
     },
     {
@@ -188,15 +188,6 @@
       "jobTitle": "International Accountability Manager",
       "twitter": "OzellaSchaefer15358-7071",
       "avatarUrl": "https://www.gravatar.com/avatar/3725b48c55f614cd5e9466aa7c1101f8?d=identicon"
-    },
-    {
-      "id": "02c0eae9-96e3-4527-a2c2-f2274bb4f3cf",
-      "firstName": "Rebeca",
-      "lastName": "Heller",
-      "email": "Jayce_Greenholt72@gmail.com",
-      "jobTitle": "Product Directives Coordinator",
-      "twitter": "RebecaHeller98352",
-      "avatarUrl": "https://www.gravatar.com/avatar/44962f9da66827c0896a1e567a9d9669?d=identicon"
     },
     {
       "id": "5f9b5d9f-4225-4706-b3b3-330762447071",
@@ -440,6 +431,22 @@
       "jobTitle": "Lawyer",
       "twitter": "ckaufmanpr",
       "id": "npaYZKI"
+    },
+    {
+      "firstName": "Alvaro",
+      "lastName": "Guillen",
+      "email": "a.guillenvelez@gmail.com",
+      "jobTitle": "Developer Full Stack",
+      "twitter": "Guillenxito",
+      "id": "khDfjJE"
+    },
+    {
+      "firstName": "Alvaro",
+      "lastName": "Guillen",
+      "email": "Guillenxito09@gmail.com",
+      "jobTitle": "Junior Full Stack Developer",
+      "twitter": "Guillenxito",
+      "id": "uQAsqLA"
     }
   ]
 }
